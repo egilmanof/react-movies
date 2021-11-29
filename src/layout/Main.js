@@ -3,8 +3,6 @@ import Movies from "../components/Movies";
 import Preloader from "../components/Preloader";
 import Search from "../components/Search";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
-
 class Main extends React.Component {
 
 
@@ -15,14 +13,14 @@ class Main extends React.Component {
     }
 
     componentDidMount() {
-        fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=terminator`)
+        fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=f147e70b&s=terminator`)
             .then(response => response.json())
             .then(data => this.setState({movies: data.Search, loading: false}));
     }
 
     searchMovies = (str, type = 'all') => {
         this.setState({loading: true})
-        fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${str}${type !== 'all' ? `&type=${type}` : ''}`)
+        fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=f147e70b&s=${str}${type !== 'all' ? `&type=${type}` : ''}`)
             .then(response => response.json())
             .then(data => this.setState({movies: data.Search, loading: false}));
     }
