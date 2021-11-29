@@ -6,14 +6,10 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 class Main extends React.Component {
 
-
     state = {
         movies: [],
         loading: true,
-
     }
-
-
 
     componentDidMount() {
         fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=terminator`)
@@ -22,7 +18,7 @@ class Main extends React.Component {
             .catch((err) => {
                 this.setState({loading: false})
             });
-    }
+    };
 
     searchMovies = (str, type = 'all') => {
         this.setState({loading: true})
@@ -32,7 +28,7 @@ class Main extends React.Component {
             .catch((err) => {
                 this.setState({loading: false})
             });
-    }
+    };
 
     render() {
         const {movies, loading} = this.state;

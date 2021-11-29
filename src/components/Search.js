@@ -62,7 +62,7 @@ class Search extends React.Component {
                             onChange={this.handleFilter}
                             checked={this.state.type === 'movie'}
                         />
-                        <span className="retreat">Только фильмы</span>
+                        <span className="retreat">Фильмы</span>
                     </label>
                     <label>
                         <input
@@ -73,7 +73,7 @@ class Search extends React.Component {
                             onChange={this.handleFilter}
                             checked={this.state.type === 'series'}
                         />
-                        <span className="retreat">Только сериалы</span>
+                        <span className="retreat">Сериалы</span>
                     </label>
                 </div>
             </div>
