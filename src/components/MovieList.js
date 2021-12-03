@@ -1,15 +1,9 @@
 
 function MovieList() {
     return(
-
-
-
         <div>
             Список
         </div>
-
-
-
     )
 }
 
